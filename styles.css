@@ -10,12 +10,13 @@
     --white: #ffffff;
     --dark: #0b0014;
     --gray-text: #6b6b6b;
+    --green: #00ff00;
 }
 
 body {
 
     font-family: 'segoe ui', sans-serif;
-    background-color: var(--with);
+    background-color: var(--white);
     color: var(--dark);
 
 
@@ -37,6 +38,8 @@ header {
 
 }
 
+
+
 .logo-img {
     height: 26px;
 
@@ -44,6 +47,7 @@ header {
 
 header nav {
     display: flex;
+    align-items:center;
     gap: 25px;
 }
 
@@ -79,40 +83,41 @@ header nav a:hover {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-   
+
 }
 
-.hero::before{
-    content:'';
-    position:absolute;
+.hero::before {
+    content: '';
+    position: absolute;
     inset: 0;
-    border-radius:inherit;
-    background:linear-gradient(to bottom, rgba(0,0,0,0.1),rgba(0,0,0,0.6));
+    border-radius: inherit;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
 }
 
-.hero-content{
+.hero-content {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    display:flex;
-    align-items:flex-end;
-    justify-content:space-between;
-    gap: 48;
-    position:relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 48px;
+    position: relative;
 }
 
-.hero-text{
+.hero-text {
     max-width: 400px;
 }
-.hero-text h1{
+
+.hero-text h1 {
     color: var(--white);
     font-size: 45px;
-    font-weight: 400px;
-    line-height:1.1;
+    font-weight: 400;
+    line-height: 1.1;
     margin-bottom: 32px;
 }
 
-.hero-card{
+.hero-card {
     background-color: var(--white);
     border-radius: 16px;
     padding: 32px;
@@ -121,13 +126,13 @@ header nav a:hover {
     max-width: 350px;
 }
 
-.hero-card h3{
-    font-size:20px;
-    font-weight:700px;
+.hero-card h3 {
+    font-size: 20px;
+    font-weight: 700;
     margin-bottom: 24px;
 }
 
-.hero-card label{
+.hero-card label {
     display: block;
     align-items: center;
     gap: 16px;
@@ -137,24 +142,483 @@ header nav a:hover {
     font-size: 14px;
 }
 
-.hero-card input{
-    width:100%;
-    font-size:16px;
-    border:none;
-    background-color: var(#f4f4f4);
+.hero-card input {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    background-color: #f4f4f4;
     padding: 12px 14px;
-    border-radius:8px;
+    border-radius: 8px;
 }
 
-.btn-confirm{
+.btn-confirm {
     background-color: var(--purple-dark);
     font-size: 16px;
-    font-size:700;
+    font-weight: 700;
     border: bold;
     cursor: pointer;
     width: 100%;
     border-radius: 8px;
-    color:var(--white);
+    color: var(--white);
     padding: 12px 14px;
     margin-top: 16px;
+}
+
+.services {
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.services a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.services a:hover {
+    color: var(--purple);
+}
+
+.card-section {
+    background-color: var(--dark);
+    padding: 80px 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.card-credito {
+    width: 360px;
+    height: 220px;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(130, 10, 209, 0.3);
+}
+
+.card-chip {
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    width: 35px;
+    height: 45px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.card-number {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.card-info {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-info span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.card-info strong {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-texto {
+    max-width: 400px;
+}
+
+.card-texto h2 {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+.card-texto p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.card-texto ul {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.card-texto ul li {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    margin: 6px 0;
+}
+
+.card-texto ul li::before {
+    content: '✔';
+    color: var(--green);
+    margin-right: 10px;
+}
+
+.btn-purple {
+    background-color: var(--purple);
+    display: inline-block;
+    padding: 15px 30px;
+    color: var(--white);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+.cta {
+    padding: 100px 40px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+}
+
+.cta h2 {
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.cta p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 32px;
+}
+
+.cta .btn-cta {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--purple);
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cta .btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    background-color: var(--dark);
+    padding: 60px 40px 30px;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 60px;
+}
+
+.footer-links {
+    flex: 1;
+}
+
+.footer-first-child {
+    flex: 2;
+}
+
+.footer-first-child p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    margin-bottom: 15px;
+
+}
+
+.footer-logo {
+    height: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-top h4 {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.footer-top a {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-top p {}
+
+.footer-bottom {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+
+}
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 1024px){
+
+    header{
+        padding: 0 20px;
+    }
+
+    .hero-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text{
+        max-width: 100%;
+    }
+
+    .hero-card{
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .services{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .card-section{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-texto{
+        max-width: 100%;
+    }
+
+    .footer-top{
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
+
+/* ==========================
+   CELULARES
+========================== */
+
+@media (max-width: 768px){
+
+   @media (max-width: 768px){
+
+    header{
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo-img{
+        margin-bottom: 5px;
+    }
+
+  @media (max-width:768px){
+
+     header nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-wcbank{
+        grid-column: 1 / -1;
+        justify-self:center;
+        margin-top:10px;
+    }
+}
+
+    header nav a{
+        font-size: 14px;
+    }
+
+    .btn-wcbank{
+        padding: 8px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+    header nav{
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    header nav a{
+        font-size: 14px;
+    }
+
+    .btn-wcbank{
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .hero{
+        padding: 100px 20px 50px;
+        min-height: auto;
+    }
+
+    .hero-text h1{
+        font-size: 32px;
+    }
+
+    .hero-card{
+        padding: 24px;
+        width: 100%;
+    }
+
+    .services{
+        padding: 60px 20px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 25px;
+    }
+
+    .card-section{
+        padding: 60px 20px;
+    }
+
+    .card-credito{
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        min-height: 220px;
+    }
+
+    .card-texto h2{
+        font-size: 30px;
+    }
+
+    .cta{
+        padding: 70px 20px;
+    }
+
+    .cta h2{
+        font-size: 28px;
+    }
+
+    .cta p{
+        font-size: 16px;
+    }
+
+    .footer-top{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+/* ==========================
+   CELULARES PEQUENOS
+========================== */
+
+@media (max-width: 480px){
+
+    .logo-img{
+        height: 22px;
+    }
+
+    .hero{
+        padding: 120px 15px 40px;
+    }
+
+    .hero-text h1{
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .hero-card{
+        padding: 20px;
+    }
+
+    .hero-card h3{
+        font-size: 18px;
+    }
+
+    .services{
+        grid-template-columns: 1fr;
+    }
+
+    .card-credito{
+        padding: 18px;
+    }
+
+    .card-number{
+        font-size: 13px;
+    }
+
+    .card-info strong{
+        font-size: 16px;
+    }
+
+    .card-texto h2{
+        font-size: 24px;
+    }
+
+    .card-texto p{
+        font-size: 14px;
+    }
+
+    .cta h2{
+        font-size: 24px;
+    }
+
+    .cta p{
+        font-size: 15px;
+    }
+
+    .cta .btn-cta{
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-purple{
+        width: 100%;
+        text-align: center;
+    }
+
+    footer{
+        padding: 40px 20px 20px;
+    }
 }
